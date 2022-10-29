@@ -1,11 +1,3 @@
-terraform {
-  backend "azurerm" {
-    resource_group_name  = "terraform-rg"
-    storage_account_name = "tfstatedevops"
-    container_name       = "tfstate"
-    key                  = "terraformgithubexample.tfstate"
-  }
-}
 
 # Configure the Microsoft Azure Provider
 provider "azurerm" {
