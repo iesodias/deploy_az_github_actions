@@ -19,6 +19,7 @@ resource "azurerm_resource_group" "my_demo_rg1" {
 
   tags = {
     "environment" = "k8sdev"
+    "environment1" = "k8sde2v"
   }
 
 }
