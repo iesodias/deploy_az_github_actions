@@ -35,3 +35,7 @@ jobs:
     - name: Terraform Plan Status
       if: steps.plan.outcome == 'failure'
       run: exit 1
+      
+    - name: Terraform Plan
+      run: terraform apply -auto-approve -no-color -input=false
+      continue-on-error: true
