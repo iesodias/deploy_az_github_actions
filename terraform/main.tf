@@ -1,11 +1,9 @@
-# Terraform Settings Block
 terraform {
-  required_version = ">= 1.0.0"
-  required_providers {
-    azurerm = {
-      source = "hashicorp/azurerm"
-      version = ">= 2.0" # Optional but recommended in production
-    }    
+  backend "azurerm" {
+    resource_group_name  = "terraform-rg"
+    storage_account_name = "tfstatedevops"
+    container_name       = "tfstate"
+    key                  = "terraformgithubexample.tfstate"
   }
 }
 
